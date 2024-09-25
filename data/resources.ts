@@ -76,6 +76,7 @@ export function getLanguageResources(
   lang: LanguageKeys,
   sub?: "projects" | "resources",
 ): { resources: string[]; projects: string[] } {
+
   const languageResource = resourceMap.lang[lang];
 
   if (languageResource) {
@@ -103,6 +104,10 @@ export function getResource(
   subCategory?: string,
   type?: "projects" | "resources",
 ): { projects: string[]; resources: string[] } {
+  if (!category) {
+     console.error('Category is undefined or empty');
+     return { projects: [], resources: [] }; // Return an empty object
+   }
   const normalizedCategory = category.toLowerCase();
 
   if (normalizedCategory === "lang" && subCategory) {

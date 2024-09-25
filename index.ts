@@ -38,31 +38,30 @@ client.once(Events.ClientReady, (c) => {
 
 
 // Todo add slash commands
-
+const prefix = "!";
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
-  const prefix = "!";
+    const args = message.content.trim().split(/ +/g);
   
+    const command = args[0].slice(prefix.length).toLowerCase();
   
-  if (!message.content.startsWith(prefix)) return;
-
-  const args = message.content.slice(prefix.length).trim().split(/ +/);
-  const command = args.shift()?.toLowerCase();
+    args.shift(); // This removes the command from the args array
 
   switch (command) {
     case "help":
       await helpCommand(message);
       break;
-    case "resources": // Fixed typo here
-      await resourceCommand(message, args);
+    case "resources": 
+    // Make sure to call resourceCommand correctly
+      await resourceCommand(message, args); 
       break;
     default:
-      // Optionally handle unknown commands
       await message.reply("Unknown command. Type !help for a list of commands.");
       break;
   }
 });
+
 
 
 client.on('interactionCreate', async interaction => {
