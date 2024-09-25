@@ -3,7 +3,7 @@ import { helpCommand } from './commands/help';
 import { resourceCommand } from './commands/resource';
 
 
-const client = new Client({intents:[GatewayIntentBits.Guilds,GatewayIntentBits.GuildMessages,
+const client = new Client({intents:[GatewayIntentBits.Guilds,GatewayIntentBits.MessageContent,GatewayIntentBits.GuildMessages,
 ]});
 const Token = process.env.DISCORD_TOKEN;
 
