@@ -1,5 +1,5 @@
 {
-  "name": "resource-bot",
+  "name": "resawce",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
