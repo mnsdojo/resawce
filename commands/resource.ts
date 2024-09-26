@@ -1,5 +1,5 @@
 import { ChatInputCommandInteraction, EmbedBuilder, Message } from "discord.js";
-import { getResource } from "../data";
+import { getResource ,demoProjects} from "../data";
 
 //handle slash command
 
