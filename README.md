@@ -1,1 +1,1 @@
-# resawce bot 
+# resawce discord bot 
