@@ -33,24 +33,7 @@ export const handleResouceSlashCommand = async (
   }
 };
 
-// Demo projects list
-const demoProjects = [
-  {
-    name: "Weather App",
-    description: "A simple weather application using a public API",
-    link: "https://github.com/example/weather-app",
-  },
-  {
-    name: "Todo List",
-    description: "A basic todo list application with local storage",
-    link: "https://github.com/example/todo-list",
-  },
-  {
-    name: "Blog Platform",
-    description: "A full-stack blog platform with user authentication",
-    link: "https://github.com/example/blog-platform",
-  },
-];
+
 
 export const handleProjectsCommand = async (
   interaction: ChatInputCommandInteraction,
